@@ -56,7 +56,7 @@ all_params[['IMPUTE_NORMAL']] <- IMPUTE_NORMAL
 all_params[['dichotomize_threshold']] <- dichotomize_threshold
 all_params[['NOT_TRANSFORM']] <- NOT_TRANSFORM
 
-eic_path <- '/PHShome/aj438/eicosanoids/2018.10 Data Sharing/'
+eic_path <- 'address'
 
 setwd(eic_path)
 data_path <- file.path(eic_path, "Data")
