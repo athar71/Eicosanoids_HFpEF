@@ -21,7 +21,7 @@ read_CPET_data <- function(subset_metabs_name = "eicosanoids",
   library(tidyverse)
   library(lubridate)
   
-  eicosanoids_path <- '/PHShome/aj438/eicosanoids/2018.10 Data Sharing/'
+  eicosanoids_path <- 'address'
   
   source(file.path(eicosanoids_path, 'R_scripts', 'normalize_data.R'))
   source(file.path(eicosanoids_path, 'R_scripts', 'eicosanoids_utils.R'))
