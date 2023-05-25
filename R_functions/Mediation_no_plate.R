@@ -7,13 +7,11 @@ library(magrittr)
 library(doParallel)
 library(mediation)
 library(dplyr)
-# Clean the environment
-rm(list = ls())
 
+# Load the log transformed standardized data
 stan_lgtrans_data <- read.csv("stan_lgtrans_data.csv", header =  TRUE) %>% as_tibble()
 eicosanoids_ids <- read.csv("EIC_IDs_936.csv", header =  TRUE) %>% as_tibble()
-stan_lgtrans_data <- stan_lgtrans_data[,-1]
-eicosanoids_ids <- eicosanoids_ids[,-1]
+
 eicosanoids_ids <- eicosanoids_ids[which(eicosanoids_ids$mzid %in% names(stan_lgtrans_data)),]
 
 # Making them as factor 
@@ -35,7 +33,7 @@ responses <- c( 'log_pap_co_slope_time',
                 'log_pcw_co_slope_time' , 'peak_vo2', 'qc_mxm_hd_cavo2_peak', 
                 'bp_response', 'vevco2nadir_864pull','sbp_r', 'pp_hr')
 
-covariates <- c('bmi', 'age', 'sex', 'htn', 'mi', 'diab_jeh', 'present_smoke')
+covariates <- c('bmi', 'age', 'sex', 'htn', 'mi', 'diab', 'present_smoke')
 STANDARDIZE_OUTCOME <- T
 
 if (STANDARDIZE_OUTCOME){
