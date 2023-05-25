@@ -34,7 +34,7 @@ pca_plot_function <- function(data_processed, pov,
   
   plots <- list()
   
-  outpath <- '/PHShome/aj438/eicosanoids/2018.10 Data Sharing/Figures/'
+  outpath <- 'address'
   if (add_output_path){
     pov_figure_path <- file.path(outpath, output_POV_name)
   }else{
