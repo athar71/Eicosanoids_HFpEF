@@ -14,3 +14,5 @@ We found 70 pro- and anti-inflammatory eicosanoid and eicosanoid-related metabol
 
 ## Codes Guidelines 
 Functions for reading and preprocessing the metabolites data are provided. Code for Mediation analyses is provided. The analysis for eicosanoids associations with HFpEF status was done using logistic regression. glm function in R was used with family = "binomial". 
+
+[![DOI](https://zenodo.org/badge/645051602.svg)](https://zenodo.org/badge/latestdoi/645051602)
